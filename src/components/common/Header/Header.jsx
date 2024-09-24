@@ -14,7 +14,10 @@ const {
 
 function Header({ toggleSidebar }) {
   return (
-    <Navbar className={headerBackground} expand="lg">
+    <Navbar
+      className={`${headerBackground} justify-content-between`}
+      expand="lg"
+    >
       <div className="d-flex align-items-center">
         <i
           className={`${toggleIcon} fa fa-bars ms-3`}
@@ -28,18 +31,17 @@ function Header({ toggleSidebar }) {
         >
           Logo
         </Navbar.Brand>
+        <p className={`${logoBrand} m-0 ms-5 logoBrand`}>
+          Sale Link:{" "}
+          <a
+            href="http://localhost:5173"
+            className="text-decoration-none text-white"
+          >
+            http://localhost:5173
+          </a>
+        </p>
       </div>
-      <Navbar.Toggle />
-      <p className={`${logoBrand} m-0 ms-5`}>
-        Sale Link:{" "}
-        <a
-          href="http://localhost:5173"
-          className="text-decoration-none text-white"
-        >
-          http://localhost:5173
-        </a>
-      </p>
-      <Navbar.Collapse className="justify-content-end">
+      <Navbar className="justify-content-end display-inline-flex">
         <Button className={`${logoutBtn} bg-transparent border-0`}>
           Logout
         </Button>
@@ -50,7 +52,7 @@ function Header({ toggleSidebar }) {
           width={30}
           alt="Avatar"
         />
-      </Navbar.Collapse>
+      </Navbar>
     </Navbar>
   );
 }

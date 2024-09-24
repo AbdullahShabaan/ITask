@@ -4,6 +4,7 @@
 }
 .toggleIcon {
   cursor: pointer;
+  z-index: 120;
 }
 
 .navbarBrand {

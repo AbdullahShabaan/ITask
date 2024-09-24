@@ -2,6 +2,7 @@
   background-color: #3a444d;
   overflow: hidden;
   transition: width 0.3s;
+  margin: 0 !important;
 }
 .sideBarLinks {
   background-color: #2e393d;
